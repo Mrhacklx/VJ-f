@@ -110,9 +110,9 @@ async def pm_text(bot, message):
         await auto_filter(bot, message)
     else:
         await message.reply_text(
-            text=f"<b>ʜᴇʏ {user} 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ɪᴛ ɪɴ ᴏᴜʀ <a href=https://t.me/vj_bots>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>",   
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"https://t.me/vj_bots")]])
-        )
+         text=f"<b>ʜᴇʏ {user} 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ɪᴛ ɪɴ ᴏᴜʀ <a href=https://t.me/movies_search_7>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ 👇</b>",   
+         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"https://t.me/movies_search_7")]])
+    )
         await bot.send_message(
             chat_id=LOG_CHANNEL,
             text=f"<b>#𝐏𝐌_𝐌𝐒𝐆\n\nNᴀᴍᴇ : {user}\n\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}</b>"
@@ -160,15 +160,9 @@ async def next_page(bot, query):
 
         btn.insert(0, 
             [
-                InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
-                InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
-                InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
+                InlineKeyboardButton('🔞 Video 🔞 ➢', url='https://t.me/+fyVl1ubus3NhOTNl')
             ]
         )
-        btn.insert(0, [
-            InlineKeyboardButton("sᴇʟᴇᴄᴛ 👉", callback_data="select"),
-            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}")
-        ])
         btn.insert(0, [
             InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
             InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
@@ -177,15 +171,9 @@ async def next_page(bot, query):
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
-                InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
-                InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
+                InlineKeyboardButton('🔞 Video 🔞 ➢', url='https://t.me/+fyVl1ubus3NhOTNl')
             ]
         )
-        btn.insert(0, [
-            InlineKeyboardButton("sᴇʟᴇᴄᴛ 👉", callback_data="select"),
-            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}")
-        ])
         btn.insert(0, [
             InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
             InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
@@ -386,7 +374,7 @@ async def filter_episodes_cb_handler(client: Client, query: CallbackQuery):
     temp.GETALL[key] = files
     settings = await get_settings(message.chat.id)
     pre = 'filep' if settings['file_secure'] else 'file'
-    if settings["button"]:
+if settings["button"]:
         btn = [
             [
                 InlineKeyboardButton(
@@ -396,16 +384,10 @@ async def filter_episodes_cb_handler(client: Client, query: CallbackQuery):
             for file in files
         ]
         btn.insert(0, 
-            [
-                InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
-                InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
-                InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
+          [
+                InlineKeyboardButton('🔞 Video 🔞 ➢', url='https://t.me/+fyVl1ubus3NhOTNl')
             ]
         )
-        btn.insert(0, [
-            InlineKeyboardButton("sᴇʟᴇᴄᴛ 👉", callback_data="select"),
-            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}")
-        ])
         btn.insert(0, [
             InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
             InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
@@ -414,16 +396,9 @@ async def filter_episodes_cb_handler(client: Client, query: CallbackQuery):
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
-                InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
-                InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
+                InlineKeyboardButton('🔞 Video 🔞 ➢', url='https://t.me/+fyVl1ubus3NhOTNl')
             ]
         )
-        btn.insert(0, [
-            InlineKeyboardButton("sᴇʟᴇᴄᴛ 👉", callback_data="select"),
-            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}")
-        ])
-
         btn.insert(0, [
             InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
             InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
@@ -561,34 +536,17 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             ]
             for file in files
         ]
-        btn.insert(0, 
-            [
-                InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
-                InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
-                InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
-            ]
-        )
         btn.insert(0, [
-            InlineKeyboardButton("sᴇʟᴇᴄᴛ 👉", callback_data="select"),
-            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}")
-        ])
-        btn.insert(0, [
-            InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
+            InlineKeyboardButton("Sᴇʟᴇᴄᴛ ᴀɢᴀɪɴ", callback_data=f"seasons#{key}")
         ])
     else:
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton(f'ǫᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
-                InlineKeyboardButton("ᴇᴘɪsᴏᴅᴇs", callback_data=f"episodes#{key}"),
-                InlineKeyboardButton("sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
+                InlineKeyboardButton('🔞 Video 🔞 ➢', url='https://t.me/+fyVl1ubus3NhOTNl')
             ]
         )
-        btn.insert(0, [
-            InlineKeyboardButton("sᴇʟᴇᴄᴛ 👉", callback_data="select"),
-            InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}")
-        ])
         btn.insert(0, [
             InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
             InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
