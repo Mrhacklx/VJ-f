@@ -1843,34 +1843,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         _, file_id = query.data.split(":")
         try:
             user_id = query.from_user.id
-            username =  query.from_user.mention 
-
-            log_msg = await client.send_cached_media(
-                chat_id=LOG_CHANNEL,
-                file_id=file_id,
-            )
-            fileName = {quote_plus(get_name(log_msg))}
-            lazy_stream = f"{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
-            lazy_download = f"https://kclplayer.blogspot.com/{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
-
-            xo = await query.message.reply_text(f'🔐')
-            await asyncio.sleep(1)
-            await xo.delete()
-
-            await log_msg.reply_text(
-                text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
-                quote=True,
-                disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup([[      # we download Link
-                                                    InlineKeyboardButton('🥰 𝗪𝗮𝘁𝗰𝗵 ᵒʳ 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝐍𝐨𝐰 🔰', url=lazy_download)]])  # web stream Link
-            )
-            await query.message.reply_text(
-                text=f"𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !\n\n📕Nᴀᴍᴇ ➠ : {fileName} \n\n📥 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱: {lazy_download} \n\n👀𝗪𝗮𝘁𝗰𝗵: {lazy_download} \n\n🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE\nTILL I DELETE",
-                quote=True,
-                disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup([[ # we download Link
-                                                    InlineKeyboardButton('🥰 𝗪𝗮𝘁𝗰𝗵 ᵒʳ 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝐍𝐨𝐰 🔰', url=lazy_download)]])  # web stream Link
-            )
+            userna
         except Exception as e:
             print(e)  # print the error message
             await query.answer(f"☣something went wrong sweetheart\n\n{e}", show_alert=True)
@@ -1880,7 +1853,35 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "reqinfo":
         await query.answer(text=script.REQINFO, show_alert=True)
 
-    elif query.data == "select":
+    elif queryuser_id = query.from_user.id
+            username =  query.from_user.mention 
+
+            log_msg = await client.send_cached_media(
+                chat_id=LOG_CHANNEL,
+                file_id=file_id,
+            )
+            fileName = {quote_plus(get_name(log_msg))}
+            stream = f"https://kclplayer.blogspot.com/{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
+            download = f"{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
+
+            xo = await query.message.reply_text(f'🔐')
+            await asyncio.sleep(1)
+            await xo.delete()
+
+            await log_msg.reply_text(
+                text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
+                quote=True,
+                disable_web_page_preview=True,
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=download),  # we download Link
+                                                    InlineKeyboardButton('🖥️ Watch online 🖥️', url=stream)]])  # web stream Link
+            )
+            await query.message.reply_text(
+                text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔",
+                quote=True,
+                disable_web_page_preview=True,
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=download),  # we download Link
+                                                    InlineKeyboardButton('🖥️ Watch online 🖥️', url=stream)]])  # web stream Link
+).data == "select":
         await query.answer(text=script.SELECT, show_alert=True)
 
     elif query.data == "sinfo":
