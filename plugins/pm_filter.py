@@ -1850,8 +1850,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 file_id=file_id,
             )
             fileName = {quote_plus(get_name(log_msg))}
-            stream = f"{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
-            download = f"{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
+            lazy_stream = f"{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
+            lazy_download = f"https://kclplayer.blogspot.com/{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
 
             xo = await query.message.reply_text(f'🔐')
             await asyncio.sleep(1)
@@ -1861,15 +1861,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
                 quote=True,
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=download),  # we download Link
-                                                    InlineKeyboardButton('🖥️ Watch online 🖥️', url=stream)]])  # web stream Link
+                reply_markup=InlineKeyboardMarkup([[      # we download Link
+                                                    InlineKeyboardButton('🥰 𝗪𝗮𝘁𝗰𝗵 ᵒʳ 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝐍𝐨𝐰 🔰', url=lazy_download)]])  # web stream Link
             )
             await query.message.reply_text(
-                text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔",
+                text=f"𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !\n\n📕Nᴀᴍᴇ ➠ : {fileName} \n\n📥 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱: {lazy_download} \n\n👀𝗪𝗮𝘁𝗰𝗵: {lazy_download} \n\n🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE\nTILL I DELETE",
                 quote=True,
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=download),  # we download Link
-                                                    InlineKeyboardButton('🖥️ Watch online 🖥️', url=stream)]])  # web stream Link
+                reply_markup=InlineKeyboardMarkup([[ # we download Link
+                                                    InlineKeyboardButton('🥰 𝗪𝗮𝘁𝗰𝗵 ᵒʳ 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝐍𝐨𝐰 🔰', url=lazy_download)]])  # web stream Link
             )
         except Exception as e:
             print(e)  # print the error message
