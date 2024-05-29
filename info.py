@@ -88,8 +88,8 @@ NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
 # Shortlink Info
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'api.shareus.io')
-SHORTLINK_API = environ.get('SHORTLINK_API', 'hRPS5vvZc0OGOEUQJMJzPiojoVK2')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'paisakamalo.in')
+SHORTLINK_API = environ.get('SHORTLINK_API', '1277f50885716d38006946cf132488349218b375')
 
 # Others
 MAX_B_TN = environ.get("MAX_B_TN", "5")
